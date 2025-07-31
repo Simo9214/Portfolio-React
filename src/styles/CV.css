@@ -1,0 +1,26 @@
+.cv-section {
+  padding: 60px 20px;
+  background-color: #e0f7fa;
+  text-align: center;
+}
+.cv-section h2 {
+  color: #023e8a;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.cv-section p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+.cv-section .btn {
+  background-color: #0077b6;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+.cv-section .btn:hover {
+  background-color: #023e8a;
+}

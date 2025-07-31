@@ -1,25 +1,14 @@
+import '../styles/CV.css';
 function CV() {
-    return (
-        <section className="cv-page" id="cv">
-        <h2> Il mio Curriculum Vitae</h2>
-        <p>Puoi scaricare il mio CV in formato PDF cliccando qui sotto:</p>
+  const cvFile = '/cv/cv-frontend.pdf';
 
-        <a href="/cv-frontend.pdf" download className="btn">
-        Scarica il CV
-        </a>
-
-        <div className="cv-preview">
-            <iframe
-            src="/cv-frontend.pdf"
-            title="Anteprima CV"
-            width="100%"
-            height="500px"
-            ></iframe>
-
-        </div>
-        </section>
-        
-    );
+  return (
+    <section className="cv-section" id="cv">
+      <h2>Il mio Curriculum Vitae</h2>
+      <p>Scarica il mio CV in formato PDF:</p>
+      <a href={cvFile} className="btn" download>Scarica il CV</a>
+    </section>
+  );
 }
 
 export default CV;

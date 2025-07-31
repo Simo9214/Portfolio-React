@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background-color: #f2f4f8;
+  color: #1c1c1c;
+  line-height: 1.6;
+}
+h1, h2, h3 {
+  font-family: 'Segoe UI Semibold', Roboto, sans-serif;
+  color: #023e8a;
+}
+a {
+  text-decoration: none;
+}
+main.page {
+  padding: 2rem;
+}
+section {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}

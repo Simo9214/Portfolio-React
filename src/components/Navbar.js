@@ -1,24 +1,27 @@
+import { useState } from 'react';
+import '../styles/Navbar.css';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
-
 
 function Navbar() {
-    
+  const [menuOpen, setMenuOpen] = useState(false);
 
-    return (
-        <nav className="navbar">
-        <h1> Frontend Portfolio</h1>
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
-        <ul className={"nav-links"}>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/progetti">Progetti</Link></li>
-        <li><Link to="/cv">CV</Link></li>
-        <li><Link to="/feedback">Feedback</Link></li>
-        <li><Link to="/contatti">Contatti</Link></li>
-    
-        </ul>
-        </nav>
-    );
+  return (
+    <nav className="navbar">
+      <h1>Il Mio Portfolio</h1>
+      <button className="burger" onClick={toggleMenu} aria-label="Menu">&#9776;</button>
+      <ul className={`nav-links ${menuOpen ? 'open' : ''}`}>
+        <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
+        <li><Link to="/projects" onClick={() => setMenuOpen(false)}>Progetti</Link></li>
+        <li><Link to="/cv" onClick={() => setMenuOpen(false)}>CV</Link></li>
+        <li><Link to="/contact" onClick={() => setMenuOpen(false)}>Contatti</Link></li>
+        <li><Link to="/testimonianze" onClick={() => setMenuOpen(false)}>Feedback</Link></li>
+      </ul>
+    </nav>
+  );
 }
 
 export default Navbar;
